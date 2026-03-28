@@ -29,4 +29,6 @@ default = ["gis", "dev"]
 [tasks]
 kernel-install = "python -m ipykernel install --user --name biocirv-ai --display-name 'Python (BioCirv AI)'"
 test = "pytest tests/"
+pre-commit-all = "pre-commit run --all-files"
+pre-commit-install = "pre-commit install"
 check-env = "python -c 'import os; from dotenv import load_dotenv; load_dotenv(); print(\"CBORG Model:\", os.getenv(\"CBORG_MODEL\", \"Not Found\"))'"
