@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ca-biositing-ai-exploration"
+version = "0.1.0"
+description = "Natural language data exploration for CA Biositing using PandasAI and CBORG"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "SSEC Team", email = "ssec@uw.edu" },
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "pandas>=2.0.3",
+    "pandasai>=2.0.0",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "python-dotenv",
+    "plotly",
+    "matplotlib",
+    "pillow",
+    "nbformat",
+]
+
+[project.urls]
+Homepage = "https://github.com/sustainability-software-lab/biocirv-ai"
+Repository = "https://github.com/sustainability-software-lab/biocirv-ai.git"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/ca_biositing"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/ca_biositing"]
